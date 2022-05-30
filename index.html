@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>re:quest - Digitale Escape Games für Bildungseinrichtungen</title>
+    <meta
+      name="description"
+      content="Erstelle Digitale Escape Games für Deine Bildungseinrichtung und vermittle spielerisch Inhalte"
+    />
+    <meta
+      property="og:title"
+      content="re:quest - Digitale Escape Games für Bildungseinrichtungen"
+    />
+    <meta
+      property="og:description"
+      content="Erstelle Digitale Escape Games für Deine Bildungseinrichtung und vermittle spielerisch Inhalte"
+    />
+    <meta property="og:image" content="/request-logo.svg" />
+    <meta property="og:url" content="https://request.reedu.de/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="re:quest" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta
+      name="keywords"
+      content="escape, game, room, digitale, bildung, museum"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900 flex items-center justify-center">
+    <div class="container text-white text-center p-8">
+      <img class="mx-auto my-8" src="/request-logo.svg" />
+      <h3 class="text-xl my-4">Code:</h3>
+      <input
+        type="text"
+        id="code_input"
+        class="rounded-md border border-zinc-700 bg-zinc-800 px-3 py-2 shadow-sm text-xl font-semibold w-40 tracking-[.5em] text-center"
+        maxlength="4"
+      />
+      <br />
+      <button
+        type="button"
+        id="submit_button"
+        class="my-4 rounded-md border border-zinc-300 bg-white py-2 px-6 text-md text-zinc-900 hover:bg-zinc-200 font-medium shadow-sm focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
+      >
+        Submit →
+      </button>
+    </div>
+
+    <script>
+      // self executing function here
+      (function () {
+        // your page initialization code here
+        // the DOM will be available here
+
+        document
+          .getElementById("submit_button")
+          .addEventListener("click", function (e) {
+            const code = document.getElementById("code_input").value;
+
+            if (code === "rqx1") {
+              window.location.href = "https://request.reedu.de";
+            } else {
+              alert("Wrong code. Try again");
+            }
+          });
+      })();
+    </script>
+  </body>
+</html>
